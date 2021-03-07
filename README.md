@@ -1,7 +1,7 @@
 # my_info
 
 A sample project to test flutter cross-platform functionality. 
-
+![Web and Linux application]((https://raw.githubusercontent.com/saivishnu725/my-info/master/Web_Linux.png))
 ## Getting Started
 
 This project is a starting point for a Flutter application.
