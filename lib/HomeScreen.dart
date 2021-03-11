@@ -6,15 +6,16 @@ class CardClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
-        // appBar: AppBar(
-        //   title: Text('Id Card'),
-        //   leading: Icon(Icons.accessibility),
-        //   centerTitle: true,
-        //   backgroundColor: Colors.grey[800],
-        //   elevation: 0.0,
-        // ),d
-        body: ListView(children: [
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        title: Text('Id Card'),
+        leading: Icon(Icons.accessibility),
+        centerTitle: true,
+        backgroundColor: Colors.grey[800],
+        elevation: 0.0,
+      ),
+      body: ListView(
+        children: [
           Padding(
             padding: const EdgeInsets.only(
               left: 30.0,
@@ -37,16 +38,8 @@ class CardClass extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
-                    'NAME',
-                    style: TextStyle(
-                      // fontSize: 40.0,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5.0,
-                  ),
+                  titleWord("Name"),
+                  SizedBox(height: 5.0),
                   Text(
                     "Sai Vishnu",
                     style: TextStyle(
@@ -55,9 +48,7 @@ class CardClass extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
-                    height: 30.0,
-                  ),
+                  SizedBox(height: 30.0),
                   Center(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -67,82 +58,49 @@ class CardClass extends StatelessWidget {
                           color: Colors.grey,
                         ),
                         SizedBox(width: 10.0),
-                        Text("saivishnu725@gmail.com",
-                            style: TextStyle(
-                              color: Colors.yellowAccent[700],
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                            )),
+                        valueWord("saivishnu725@gmail.com"),
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  Text(
-                    'Website',
-                    style: TextStyle(
-                      // fontSize: 40.0,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5.0,
-                  ),
-                  Text(
-                    "https://sai-vishnu.tk",
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      color: Colors.yellowAccent[700],
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  Text(
-                    'Age',
-                    style: TextStyle(
-                      // fontSize: 40.0,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5.0,
-                  ),
-                  Text(
-                    "17",
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      color: Colors.yellowAccent[700],
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  Text(
-                    'Github profile',
-                    style: TextStyle(
-                      // fontSize: 40.0,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5.0,
-                  ),
-                  Text(
-                    "https://github.com/saivishnu725",
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      color: Colors.yellowAccent[700],
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  SizedBox(height: 30.0),
+                  titleWord("Website"),
+                  SizedBox(height: 5.0),
+                  valueWord("https://sai-vishnu.tk"),
+                  SizedBox(height: 30.0),
+                  titleWord("Age"),
+                  SizedBox(height: 5.0),
+                  valueWord("17"),
+                  SizedBox(height: 30.0),
+                  titleWord("Github profile"),
+                  SizedBox(height: 5.0),
+                  valueWord("https://github.com/saivishnu725"),
                 ],
               ),
             ),
           ),
-        ]));
+        ],
+      ),
+    );
   }
+}
+
+Widget titleWord(String word) {
+  return Text(
+    word,
+    style: TextStyle(
+      // fontSize: 20.0,
+      color: Colors.grey,
+    ),
+  );
+}
+
+Widget valueWord(String word) {
+  return Text(
+    word,
+    style: TextStyle(
+      fontSize: 22.0,
+      color: Colors.yellowAccent[700],
+      fontWeight: FontWeight.bold,
+    ),
+  );
 }
